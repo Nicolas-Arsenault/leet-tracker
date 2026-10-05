@@ -11,6 +11,9 @@ export async function GET(request: NextRequest) {
 
   const cookieResponse = NextResponse.next();
   const supabase = createServerClient(url, key, {
+    auth: {
+      experimental: { appendPkceFlowIdToRedirects: true },
+    },
     cookies: {
       getAll: () => request.cookies.getAll(),
       setAll: (cookies) => {
