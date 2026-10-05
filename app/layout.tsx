@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Studyloop — LeetCode practice that sticks",
-  description: "Track solved problems, spot weak patterns, and review on a deterministic spaced repetition schedule.",
+  title: "SolveLoop — Log, learn, re-solve",
+  description: "A private LeetCode problem log with pattern analytics and automatic spaced re-solving for difficult problems.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
