@@ -17,7 +17,10 @@ export async function GET(request: NextRequest) {
     },
   });
   const { error } = await supabase.auth.exchangeCodeForSession(code);
-  if (error) return NextResponse.redirect(new URL("/login?error=oauth", request.url));
+  if (error) {
+    console.error("Supabase OAuth exchange failed", { code: error.code, message: error.message });
+    return NextResponse.redirect(new URL(`/login?error=oauth&code=${encodeURIComponent(error.code ?? "exchange-failed")}`, request.url));
+  }
   const { data: { user } } = await supabase.auth.getUser();
   if (user?.email?.toLowerCase() !== ownerEmail) {
     await supabase.auth.signOut();
