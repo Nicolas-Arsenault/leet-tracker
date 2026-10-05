@@ -39,4 +39,4 @@ Import this directory into Vercel, add `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_
 
 ## Review algorithm
 
-The schedule is intentionally deterministic and applies only to problems marked as difficult. They move through fixed intervals of 1, 3, 7, 14, 30, and 60 days: Still stuck resets to 1 day, Solved advances one step, and Easy now advances two. Clean solves and imported problems do not enter the queue automatically.
+The schedule is intentionally deterministic and applies only to problems marked as difficult. They move through fixed intervals of 3, 7, 14, 30, 60, and 90 days: Still stuck resets to 3 days, Solved advances one step, and Easy now advances two. Clean solves and imported problems do not enter the queue automatically.
